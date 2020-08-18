@@ -1,0 +1,8 @@
+*.o
+*~
+*.pyc
+tags
+*.swp
+Readme.html
+.sconsign.dblite
+.ycm_extra_conf.py

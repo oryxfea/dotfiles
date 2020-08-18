@@ -1,0 +1,27 @@
+[user]
+	email = oryxfea@users.noreply.github.com
+	name = oryxfea
+[merge]
+	tool = vimdiff
+[core]
+	# editor = vim
+	autocrlf = input
+	quotepath = false
+	pager = less -+FRSX -FRX
+	excludesfile = ~/.gitignore
+[color]
+	ui = true
+[alias]
+	lg = log --graph --pretty=format:'%Cred%H%Creset %C(yellow)%d%Creset %n Author: %cn <%ce> %n Date: %cd %Cblue(%cr)%Creset%n%n  %Cgreen%s%Creset%n%n  %b' -w
+	co = checkout
+	c = commit
+	d = diff
+[push]
+	default = simple
+	rebase = true
+[branch]
+	autosetuprebase = always
+# [credential]
+# 	helper = /usr/lib/git-core/git-credential-gnome-keyring
+# [http "gist.github.com"]
+# 	proxy = socks5://127.0.0.1:1080
