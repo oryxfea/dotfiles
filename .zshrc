@@ -47,7 +47,7 @@ plugins=(git wd)
 source $ZSH/oh-my-zsh.sh
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
-    eval `dircolors $HOME/.dotfiles/Dracula.dircolors.txt`
+    eval `dircolors $HOME/dotfiles/Dracula.dircolors.txt`
 fi
 
 # Customize to your needs...
@@ -60,10 +60,10 @@ fi
 # eval "$(fasd --init auto)"
 
 #yaourt
-export EDITOR=vim
+# export EDITOR=vim
 
 #svn
-export SVN_EDITOR=vim
+# export SVN_EDITOR=vim
 
 #alias
 alias ehco="echo"
