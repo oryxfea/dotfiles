@@ -8,6 +8,7 @@ pushd $HOME
 
 ln -s .dotfiles/.gitconfig .
 ln -s .dotfiles/.gitignore .
+rm .zshrc
 ln -s .dotfiles/.zshrc .
 
 # Install on-my-zsh

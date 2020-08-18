@@ -15,7 +15,10 @@
 	lg = log --graph --pretty=format:'%Cred%H%Creset %C(yellow)%d%Creset %n Author: %cn <%ce> %n Date: %cd %Cblue(%cr)%Creset%n%n  %Cgreen%s%Creset%n%n  %b' -w
 	co = checkout
 	c = commit
+	ca = commit --all
 	d = diff
+	s = status
+	a = add
 [push]
 	default = simple
 	rebase = true
