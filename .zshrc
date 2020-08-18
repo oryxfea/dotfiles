@@ -47,7 +47,7 @@ plugins=(git wd)
 source $ZSH/oh-my-zsh.sh
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
-    eval `dircolors /mnt/c/Users/xiagao/OneDrive/Configs/Dracula.dircolors.txt`
+    eval `dircolors $HOME/.dotfiles/Dracula.dircolors.txt`
 fi
 
 # Customize to your needs...
@@ -57,7 +57,7 @@ fi
 
 # https://github.com/clvv/fasd
 # A tool offers quick access to files and directories for POSIX shells
-eval "$(fasd --init auto)"
+# eval "$(fasd --init auto)"
 
 #yaourt
 export EDITOR=vim
@@ -136,15 +136,9 @@ bindkey -v
 #     export TERM='screen-256color' 
 # fi
 
-if [ -n "$XDG_SESSION_ID" ];then
-    eval $(gnome-keyring-daemon --start)
-    export SSH_AUTH_SOCK
-fi
+# if [ -n "$XDG_SESSION_ID" ];then
+#     eval $(gnome-keyring-daemon --start)
+#     export SSH_AUTH_SOCK
+# fi
 
 unset GREP_OPTIONS
-
-# Created by `userpath` on 2020-05-15 16:19:03
-export PATH="$PATH:/home/oryxfea/.local/bin"
-
-# Secrets
-export AzureTranslateServiceKey="cb0642dbca494f38a53c65d95eefa984"
