@@ -1,6 +1,7 @@
 #!/bin/bash
 
 sudo apt install -y less
+sudo apt install -y gdb
 
 pushd $HOME
 
