@@ -47,7 +47,7 @@ plugins=(git wd)
 source $ZSH/oh-my-zsh.sh
 
 if [[ "$OSTYPE" != "darwin"* ]]; then
-    eval `dircolors $HOME/dotfiles/Dracula.dircolors.txt`
+    eval `dircolors $HOME/.dotfiles/Dracula.dircolors.txt`
 fi
 
 # Customize to your needs...
@@ -111,6 +111,11 @@ alias top='htop'
 alias tmp='mkdir -p ~/tmp; cd ~/tmp'
 alias utmp='rm -r ~/tmp'
 alias mkvirtualenv3='mkvirtualenv -p python3'
+alias y='yarn'
+alias ya='yarn && yarn build && yarn start'
+alias ybs='yarn build && yarn start'
+alias yb='yarn build'
+alias ys='yarn start'
 
 #hash -d cu03=sandnon@cu03:/home/sandnon/Downloads/hudbt
 
@@ -127,7 +132,7 @@ man() {
 			man "$@"
 }
 
-export PATH=$PATH:~/.gem/ruby/2.0.0/bin:~/opt/android-sdk-linux/platform-tools:~/.ssh_connections/:~/scripts:~/opt/bin:~/.local/bin
+export PATH=$PATH:~/.gem/ruby/2.0.0/bin:~/opt/android-sdk-linux/platform-tools:~/.ssh_connections/:~/scripts:~/opt/bin:~/.local/bin:~/Library/Python/3.8/bin
 
 bindkey -v
 
@@ -142,3 +147,8 @@ bindkey -v
 # fi
 
 unset GREP_OPTIONS
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
+[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
