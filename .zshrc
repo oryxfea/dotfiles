@@ -104,6 +104,7 @@ alias p8='ping 8.8.8.8'
 #alias soff='xrandr --output VGA-0 --off'
 #alias son='xrandr --output VGA-0 --auto --right-of LVDS-0'
 #alias xo='xdg-open'
+alias tc='$HOME/.dotfiles/tmux_script.sh'
 alias ta='tmux attach -t'
 alias td='tmux detach'
 alias ud='yaourt -Syua'
@@ -116,6 +117,7 @@ alias ya='yarn && yarn build && yarn start'
 alias ybs='yarn build && yarn start'
 alias yb='yarn build'
 alias ys='yarn start'
+alias yt='yarn test'
 
 #hash -d cu03=sandnon@cu03:/home/sandnon/Downloads/hudbt
 
