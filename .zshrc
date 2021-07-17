@@ -131,6 +131,9 @@ alias ybs='yarn build && yarn start'
 alias yb='yarn build'
 alias ys='yarn start'
 alias yt='yarn test'
+alias yw='yarn watch'
+alias yd='yarn docker'
+
 alias cr='git rev-parse --show-toplevel && cd $(git rev-parse --show-toplevel)' 
 
 alias clearLocale='cr && git co packages/react-flex-table-ui/locale'

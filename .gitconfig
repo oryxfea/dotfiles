@@ -19,8 +19,9 @@
 	d = diff
 	s = status
 	a = add
+	b = branch
 [push]
-	default = simple
+	default = current
 	rebase = true
 [branch]
 	autosetuprebase = always
@@ -28,3 +29,6 @@
 # 	helper = /usr/lib/git-core/git-credential-gnome-keyring
 # [http "gist.github.com"]
 # 	proxy = socks5://127.0.0.1:1080
+[pull]
+	rebase = true
+
