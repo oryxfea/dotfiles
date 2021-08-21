@@ -65,6 +65,13 @@ fi
 #svn
 # export SVN_EDITOR=vim
 
+function gitcloneGitHub() {
+    local url=$(echo $1 | sed 's/https:\/\/github.com/https:\/\/gitclone.com\/github.com/')
+    local target=$([ -z "$2" ] && basename "$1" .git || basename "$2")
+    git clone $url $target
+    cd $target
+}
+
 #alias
 alias ehco="echo"
 alias sl="ls"
@@ -118,6 +125,7 @@ alias ybs='yarn build && yarn start'
 alias yb='yarn build'
 alias ys='yarn start'
 alias yt='yarn test'
+alias cr='git rev-parse --show-toplevel && cd $(git rev-parse --show-toplevel)' 
 
 #hash -d cu03=sandnon@cu03:/home/sandnon/Downloads/hudbt
 
