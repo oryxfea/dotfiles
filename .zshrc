@@ -1,3 +1,8 @@
+# Disable git branch auto-completion of remote branches as it's slow
+__git_heads_remote() {}
+__git_remote_branch_names_noprefix() {}
+__git_commits() {}
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 #ZSH=/usr/share/oh-my-zsh
@@ -60,7 +65,7 @@ fi
 # eval "$(fasd --init auto)"
 
 #yaourt
-# export EDITOR=vim
+# export EDITOR=code
 
 #svn
 # export SVN_EDITOR=vim
@@ -83,6 +88,7 @@ alias py3='python3'
 alias v='f -e vim'
 alias vi="vim"
 alias vd="vim -x ~/Dropbox/diary/`date +%F`"
+alias gs='git status'
 alias gits='git status'
 alias gita='git add'
 alias gitc='git commit'
@@ -126,6 +132,8 @@ alias yb='yarn build'
 alias ys='yarn start'
 alias yt='yarn test'
 alias cr='git rev-parse --show-toplevel && cd $(git rev-parse --show-toplevel)' 
+
+alias clearLocale='cr && git co packages/react-flex-table-ui/locale'
 
 #hash -d cu03=sandnon@cu03:/home/sandnon/Downloads/hudbt
 
