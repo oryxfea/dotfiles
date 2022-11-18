@@ -133,7 +133,6 @@ alias ys='yarn start'
 alias yt='yarn test'
 alias yw='yarn watch'
 alias yd='yarn docker'
-
 alias cr='git rev-parse --show-toplevel && cd $(git rev-parse --show-toplevel)' 
 
 alias clearLocale='cr && git co packages/react-flex-table-ui/locale'
@@ -172,3 +171,12 @@ unset GREP_OPTIONS
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+fix_wsl2_interop() {
+    for i in $(pstree -np -s $$ | grep -o -E '[0-9]+'); do
+        if [[ -e "/run/WSL/${i}_interop" ]]; then
+            export WSL_INTEROP=/run/WSL/${i}_interop
+        fi
+    done
+}
+fix_wsl2_interop
